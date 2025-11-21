@@ -148,9 +148,9 @@ Hem üye listesinden hem de mesajlardaki kullanıcı isimlerinden üyelere işle
 ### DM Sistemi
 Ana Sayfa butonuna tıklayarak bota gönderilen tüm DM'leri görüntüleyebilirsiniz.
 
-## � Liesans
+## � Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır.
+Bu proje Apache-2.0 lisansı altında lisanslanmıştır.
 
 ## 📞 İletişim
 
