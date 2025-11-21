@@ -1,0 +1,287 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 72px;
+  background: #202225;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeButton {
+  width: 48px;
+  height: 48px;
+  background: #36393f;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #5865f2;
+  margin: 12px 0 0 0;
+}
+
+.homeButton:hover {
+  border-radius: 35%;
+  background: #5865f2;
+  color: #fff;
+}
+
+.homeButton::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  width: 4px;
+  height: 0;
+  background: #fff;
+  border-radius: 0 4px 4px 0;
+  transition: height 0.2s ease;
+}
+
+.homeButton:hover::before {
+  height: 20px;
+}
+
+.homeButton.active {
+  border-radius: 35%;
+}
+
+.homeButton.active::before {
+  height: 40px;
+}
+
+.panelHeader {
+  padding: 16px;
+  background: #2f3136;
+  border-bottom: 1px solid #202225;
+  box-shadow: 0 1px 0 rgba(4,4,5,0.2), 0 1.5px 0 rgba(6,6,7,0.05), 0 2px 0 rgba(4,4,5,0.05);
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.panelHeader h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.channelsPanel {
+  width: 240px;
+  background: #2f3136;
+  border-left: 1px solid #202225;
+  display: flex;
+  flex-direction: column;
+}
+
+.channelsList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.channelItem {
+  padding: 6px 8px;
+  margin: 0 8px 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #96989d;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.channelItem:hover {
+  background: #3c3f45;
+  color: #dcddde;
+}
+
+.channelItem.active {
+  background: #404249;
+  color: #fff;
+}
+
+.dmItem {
+  padding: 8px;
+  margin: 0 8px 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dmItem:hover {
+  background: #3c3f45;
+}
+
+.dmItem.active {
+  background: #404249;
+}
+
+.dmAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dmInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.dmName {
+  color: #dcddde;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dmLastMessage {
+  color: #72767d;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+.guildSeparator {
+  width: 32px;
+  height: 2px;
+  background: #36393f;
+  border-radius: 1px;
+  margin: 8px 0;
+}
+
+.guildsList {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.guildsList::-webkit-scrollbar {
+  width: 0;
+}
+
+.guildItem {
+  width: 48px;
+  height: 48px;
+  background: #36393f;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 600;
+  color: #dcddde;
+}
+
+.guildItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.guildItem.noIcon {
+  background: #5865f2;
+}
+
+.guildItem:hover {
+  border-radius: 35%;
+  background: #5865f2;
+}
+
+.guildItem.noIcon:hover {
+  background: #4752c4;
+}
+
+.guildItem.active {
+  border-radius: 35%;
+}
+
+.guildItem::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  width: 4px;
+  height: 0;
+  background: #fff;
+  border-radius: 0 4px 4px 0;
+  transition: height 0.2s ease;
+}
+
+.guildItem:hover::before {
+  height: 20px;
+}
+
+.guildItem.active::before {
+  height: 40px;
+}
+
+.userInfo {
+  padding: 12px 0;
+  background: #202225;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid #1e1f22;
+  width: 100%;
+  margin-top: auto;
+}
+
+.userInfo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: border-radius 0.2s;
+  cursor: pointer;
+}
+
+.userInfo img:hover {
+  border-radius: 35%;
+  opacity: 0.8;
+}
+
+.logoutButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px 16px;
+  background: #ed4245;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+  z-index: 1000;
+}
+
+.logoutButton:hover {
+  background: #c03537;
+}

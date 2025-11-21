@@ -1,0 +1,162 @@
+.container {
+  width: 240px;
+  background: #2f3136;
+  border-left: 1px solid #202225;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 24px 16px 8px 16px;
+  background: #2f3136;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #8e9297;
+}
+
+.membersList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.roleGroup {
+  margin-bottom: 15px;
+}
+
+.roleTitle {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #949ba4;
+  padding: 24px 8px 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 40px;
+}
+
+.roleCount {
+  font-weight: 400;
+}
+
+.memberItem {
+  padding: 1px 8px;
+  margin: 0 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 42px;
+}
+
+.memberItem:hover {
+  background: #3c3f45;
+}
+
+.memberAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.memberAvatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.memberStatus {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  border: 2px solid #2f3136;
+}
+
+.memberStatus.online {
+  background: #3ba55d;
+}
+
+.memberStatus.idle {
+  background: #faa81a;
+}
+
+.memberStatus.dnd {
+  background: #ed4245;
+}
+
+.memberStatus.offline {
+  background: #747f8d;
+}
+
+.memberInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.memberName {
+  font-size: 15px;
+  font-weight: 500;
+  color: #b5bac1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.memberActivity {
+  font-size: 13px;
+  color: #80848e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+
+.memberMenu {
+  position: fixed;
+  background: #18191c;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  z-index: 1000;
+  min-width: 180px;
+}
+
+.menuItem {
+  padding: 8px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #dcddde;
+  font-size: 14px;
+}
+
+.menuItem:hover {
+  background: #4752c4;
+}
+
+.menuItem.danger {
+  color: #ed4245;
+}
+
+.menuItem.danger:hover {
+  background: #ed4245;
+  color: #fff;
+}
+
+.menuSeparator {
+  height: 1px;
+  background: #3c3f45;
+  margin: 4px 0;
+}

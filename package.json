@@ -1,0 +1,30 @@
+{
+  "name": "discord-bot-client",
+  "version": "1.0.0",
+  "description": "wraithsdev",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.3.3"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.8",
+    "utf-8-validate": "^6.0.3",
+    "zlib-sync": "^0.1.9"
+  }
+}
