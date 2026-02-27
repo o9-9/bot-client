@@ -1,6 +1,6 @@
 # Discord Bot Client
 
-Modern ve güçlü Discord bot yönetim arayüzü. Discord botunuzu tarayıcıdan yönetin, mesajlaşın ve sunucularınızı kontrol edin.
+A modern and powerful Discord bot management interface. Manage your Discord bot, message, and monitor your servers from your browser.
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
 ![React](https://img.shields.io/badge/React-18-blue)
@@ -11,76 +11,69 @@ Modern ve güçlü Discord bot yönetim arayüzü. Discord botunuzu tarayıcıda
 ## 📸 Ekran Görüntüleri
 
 <div align="center">
-  <img src="./görseller/1.png" alt="Ekran 1" width="800"/>
+  <img src="./images/1.png" alt="Screen 1" width="800"/>
   <br/><br/>
-  <img src="./görseller/2.png" alt="Ekran 2" width="800"/>
+  <img src="./images/2.png" alt="Screen 2" width="800"/>
   <br/><br/>
-  <img src="./görseller/3.png" alt="Ekran 3" width="800"/>
+  <img src="./images/3.png" alt="Screen 3" width="800"/>
   <br/><br/>
-  <img src="./görseller/4.png" alt="Ekran 4" width="800"/>
+  <img src="./images/4.png" alt="Screen 4" width="800"/>
 </div>
 
-## ✨ Özellikler
+## ✨ Features
 
-### 💬 Mesajlaşma
-- Mesaj tepkileri (reactions)
-- DM (Direkt Mesaj) desteği
-- Mesaj geçmişi görüntüleme
+### 💬 Messaging
+- Message reactions
+- DM (Direct Message) support
+- Viewing message history
 
-### 👥 Üye Yönetimi
-- Üye listesi ve rolleri
-- Online/Offline durumları
-- Üye aktiviteleri
-- Üye işlemleri:
-  - DM gönderme
-  - İsim değiştirme
-  - Rol verme
-  - Timeout
-  - Kick
-  - Ban
+### 👥 Member Management
+- Member list and roles
+- Online/Offline status
+- Member activities
+- Member actions: - Sending DMs - Changing name - Assigning roles - Timeout
+- Kick
+- Ban
 
-## 🚀 Kurulum
+## 🚀 Installation
 
-### Gereksinimler
-- Node.js 18 veya üzeri
+### Requirements
+- Node.js 18 or higher
 - Discord Bot Token
 
-### Adımlar
+### Steps
 
-1. Projeyi klonlayın:
+1. Clone the project:
 ```bash
 git clone <repo-url>
 cd discord-bot-client
 ```
-
-2. Bağımlılıkları yükleyin:
+2. Install dependencies:
 ```bash
 npm install
 ```
-
-3. Geliştirme sunucusunu başlatın:
+3. Start the development server:
 ```bash
 npm run dev
 ```
-
-4. Tarayıcıda açın:
+4. Open in browser:
 ```
 http://localhost:3000
 ```
 
-## 🔧 Kullanım
+## 🔧 Usage
 
-### Bot Token Alma
+### Obtaining Bot Token
 
-1. [Discord Developer Portal](https://discord.com/developers/applications)'a gidin
-2. "New Application" butonuna tıklayın
-3. Sol menüden "Bot" sekmesine gidin
-4. "Reset Token" butonuna tıklayın
-5. Token'ı kopyalayın
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications)
+2. Click the "New Application" button
+3. Go to the "Bot" tab in the left menu
+4. Click the "Reset Token" button
+5. Copy the token
 
-### Bot İzinleri
+### Bot Permissions
 
-Botunuzun aşağıdaki izinlere sahip olması gerekir:
+Your bot must have the following permissions:
 - Read Messages/View Channels
 - Send Messages
 - Manage Messages
@@ -91,70 +84,70 @@ Botunuzun aşağıdaki izinlere sahip olması gerekir:
 - Manage Nicknames
 - Manage Roles
 
-### Giriş Yapma
+### Logging In
 
-1. Uygulamayı açın
-2. Bot token'ınızı girin
-3. "Giriş Yap" butonuna tıklayın
-4. Sunucularınız otomatik olarak yüklenecektir
+1. Open the application
+2. Enter your bot token
+3. Click the "Log In" button
+4. Your servers will be automatically loaded
 
 ## 📁 Proje Yapısı
 
 ```
 discord-bot-client/
-├── app/                      # Next.js App Router
-│   ├── api/                  # API Routes
-│   │   ├── channels/         # Kanal işlemleri
-│   │   ├── dms/              # DM işlemleri
-│   │   ├── guilds/           # Sunucu işlemleri
-│   │   ├── login/            # Giriş
-│   │   └── members/          # Üye işlemleri
-│   ├── globals.css           # Global stiller
-│   ├── layout.tsx            # Ana layout
-│   └── page.tsx              # Ana sayfa
-├── components/               # React bileşenleri
-│   ├── ChatPanel.tsx         # Mesajlaşma paneli
-│   ├── ChannelsPanel.tsx     # Kanal listesi
-│   ├── LoginScreen.tsx       # Giriş ekranı
-│   ├── MainScreen.tsx        # Ana ekran
-│   └── MembersPanel.tsx      # Üye listesi
-├── lib/                      # Yardımcı kütüphaneler
-│   └── discord-client.ts     # Discord.js client
-├── server.js                 # WebSocket sunucusu
-├── next.config.js            # Next.js yapılandırması
-└── package.json              # Bağımlılıklar
+├── app/ # Next.js App Router
+│ ├── api/ # API Routes
+│ │ ├── channels/ # Channel operations
+│ │ ├── dms/ # DM operations
+│ │ ├── guilds/ # Server operations
+│ │ ├── login/ # Login
+│ │ └── members/ # Member operations
+│ ├── globals.css # Global styles
+│ ├── layout.tsx # Main layout
+│ └── page.tsx # Homepage
+├── components/ # React components
+│ ├── ChatPanel.tsx # Messaging panel
+│ ├── ChannelsPanel.tsx # Channel list
+│ ├── LoginScreen.tsx # Login screen
+│ ├── MainScreen.tsx # Main screen
+│ └── MembersPanel.tsx # Member list
+├── lib/ # Helper libraries
+│ └── discord-client.ts # Discord.js client
+├── server.js # WebSocket server
+├── next.config.js # Next.js configuration
+└── package.json # Dependencies
 ```
 
-## 🛠️ Teknolojiler
+## 🛠️ Technologies
 
 - **Next.js 14** - React framework
-- **React 18** - UI kütüphanesi
-- **TypeScript** - Tip güvenliği
+- **React 18** - UI library
+- **TypeScript** - Type safety
 - **Discord.js** - Discord API
-- **WebSocket** - Gerçek zamanlı iletişim
-- **CSS Modules** - Modüler stil yönetimi
+- **WebSocket** - Real-time communication
+- **CSS Modules** - Modular style management
 
-## 📝 Özellik Detayları
+## 📝 Feature Details
 
-### Gerçek Zamanlı Mesajlaşma
-WebSocket kullanarak mesajlar anında güncellenir. Sayfa yenilemeye gerek yoktur.
+### Real-Time Messaging
+Messages are updated instantly using WebSocket. No page refresh is required.
 
-### Token Hatırlama
-Giriş yaptıktan sonra token localStorage'da saklanır. Sayfa yenilendiğinde otomatik giriş yapılır.
+### Token Recall
+After logging in, the token is stored in localStorage. Automatic login is performed when the page is refreshed.
 
-### Üye Menüsü
-Hem üye listesinden hem de mesajlardaki kullanıcı isimlerinden üyelere işlem yapabilirsiniz.
+### Member Menu
+You can perform actions on members both from the member list and from usernames in messages.
 
-### DM Sistemi
-Ana Sayfa butonuna tıklayarak bota gönderilen tüm DM'leri görüntüleyebilirsiniz.
+### DM System
+You can view all DMs sent to the bot by clicking the Home button.
 
-## � Lisans
+## License
 
-Bu proje Apache-2.0 lisansı altında lisanslanmıştır.
+This project is licensed under the Apache-2.0 license.
 
-## 📞 İletişim
+## 📞 Contact
 
-Sorularınız için https://discord.gg/vsc adresinden destek alabilirsiniz.
+For your questions, you can get support from https://discord.gg/vsc
 
 ---
 
